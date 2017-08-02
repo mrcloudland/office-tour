@@ -147,6 +147,8 @@ static inline UnityARTrackingReason GetUnityARTrackingReasonFromARTrackingReason
             return UnityARTrackingStateReasonExcessiveMotion;
         case ARTrackingStateReasonInsufficientFeatures:
             return UnityARTrackingStateReasonInsufficientFeatures;
+        case ARTrackingStateReasonInitializing:
+            return UnityARTrackingStateReasonNone;
         default:
             [NSException raise:@"UnrecognizedARTrackingStateReason" format:@"Unrecognized ARTrackingStateReason: %ld", (long)trackingReason];
             break;
